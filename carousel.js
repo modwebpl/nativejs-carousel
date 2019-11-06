@@ -34,6 +34,7 @@ export class carousel {
     this.setNavigation();
     this.setSwipe();
 
+    // hook custom event for refresh carousel when u need remove / hide one or more elements from grid area
     document.addEventListener('ref', () => {
       this.init();
       this.reset();
