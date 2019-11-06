@@ -14,14 +14,13 @@ export class carousel {
     _this.caro = this.el;
     if (!this.caro) return false;
 
-    //_this.nav = nav || el.getElementsByClassName('arrows')[0] || document.body.getElementsByClassName('arrows')[0];
-    _this.nav = nav || app.getElementsByClassName('arrows')[0];
+    _this.nav = typeof nav === 'string' ? app.getElementsByClassName(nav) : nav;
     if (!this.nav) return false;
 
-    _this.prev = this.nav.children[0];
+    _this.prev = this.nav[0];
     if (!this.prev) return false;
 
-    _this.next = this.nav.children[1];
+    _this.next = this.nav[1];
     if (!this.next) return false;
 
     this.lock = false;
@@ -67,6 +66,8 @@ export class carousel {
     this.i = 0;
     this.max = this.els.length;
     this.per = 5;
+    
+    //todo JSON config for RWD
 
     if (rwd <= 1024) {
       this.per = 6;
