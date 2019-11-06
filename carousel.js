@@ -14,7 +14,7 @@ export class carousel {
     _this.caro = this.el;
     if (!this.caro) return false;
 
-    _this.nav = typeof nav === 'string' ? app.getElementsByClassName(nav) : nav;
+    _this.nav = typeof nav === 'string' ? document.body.getElementsByClassName(nav) : nav;
     if (!this.nav) return false;
 
     _this.prev = this.nav[0];
