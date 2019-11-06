@@ -1,4 +1,4 @@
-# nativejs-carousel
-PureJS carousel with multiple columns
+# PureJS carousel
+Modern carousel with multiple columns
 
 Demo: http://www.modweb.pl/pub/locco/
