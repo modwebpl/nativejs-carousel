@@ -49,10 +49,10 @@ export class carousel {
     let dragev = new swipe(this.caro);
 
     dragev.left(prevSlide => {
-      this.nav.children[1].click();
+      this.nav[1].click();
     });
     dragev.right(nextSlide => {
-      this.nav.children[0].click();
+      this.nav[0].click();
     });
     dragev.run();
   }
