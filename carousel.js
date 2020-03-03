@@ -69,17 +69,9 @@ export class carousel {
     this.per = 5;
     
     //todo JSON config for RWD
-
-    if (rwd <= 1024) {
-      this.per = 6;
-    }
-
-    if (rwd <= 500) {
-      this.per = 4;
-    }
+    this.per = rwd <= 1024 ? 6 ? rwd <= 500 : 4;
 
     this.newCol = this.col;
-
     this.col >= 2 && this.max < this.per * this.col ? this.newCol = 1 : '';
 
     this.relW = this.caro.parentNode.offsetWidth;
